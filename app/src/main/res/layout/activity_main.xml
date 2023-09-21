@@ -37,6 +37,14 @@
         android:hint="Heure (HH:MM)"
         android:inputType="text" />
 
+    <EditText
+        android:id="@+id/critique_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Critique"
+        android:inputType="textMultiLine" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,14 +94,6 @@
         android:layout_marginTop="0dp"
         android:numStars="5"
         android:rating="0.0" />
-
-    <EditText
-        android:id="@+id/critique_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Critique"
-        android:inputType="textMultiLine"
-        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/add_review_button"

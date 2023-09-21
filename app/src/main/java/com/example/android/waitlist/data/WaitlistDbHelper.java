@@ -13,8 +13,7 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "waitlist.db";
 
     // If you change the database schema, you must increment the database version
-    private static final int DATABASE_VERSION = 1;
-
+    private static final int DATABASE_VERSION = 10;
     // Constructor
     public WaitlistDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -26,15 +25,13 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
         // Create a table to hold waitlist data
         final String SQL_CREATE_WAITLIST_TABLE = "CREATE TABLE " + WaitlistEntry.TABLE_NAME + " (" +
                 WaitlistEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                WaitlistEntry.COLUMN_GUEST_NAME + " TEXT NOT NULL, " +
-                WaitlistEntry.COLUMN_PARTY_SIZE + " INTEGER NOT NULL, " +
                 WaitlistEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
-                WaitlistEntry.COLUMN_RESTAURANT_NAME + " TEXT NOT NULL, " +
-                WaitlistEntry.COLUMN_DATE + " TEXT NOT NULL, " +
-                WaitlistEntry.COLUMN_TIME + " TEXT NOT NULL, " +
-                WaitlistEntry.COLUMN_DECORATION_RATING + " REAL NOT NULL, " +
-                WaitlistEntry.COLUMN_FOOD_RATING + " REAL NOT NULL, " +
-                WaitlistEntry.COLUMN_SERVICE_RATING + " REAL NOT NULL, " +
+                WaitlistEntry.COLUMN_RESTAURANT_NAME + " TEXT , " +
+                WaitlistEntry.COLUMN_DATE + " TEXT , " +
+                WaitlistEntry.COLUMN_TIME + " TEXT , " +
+                WaitlistEntry.COLUMN_DECORATION_RATING + " REAL , " +
+                WaitlistEntry.COLUMN_FOOD_RATING + " REAL , " +
+                WaitlistEntry.COLUMN_SERVICE_RATING + " REAL , " +
                 WaitlistEntry.COLUMN_CRITIQUE + " TEXT" +
                 "); ";
 

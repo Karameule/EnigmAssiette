@@ -33,8 +33,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         if (!mCursor.moveToPosition(position))
             return;
 
-        String name = mCursor.getString(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry.COLUMN_GUEST_NAME));
-        int partySize = mCursor.getInt(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry.COLUMN_PARTY_SIZE));
+
         long id = mCursor.getLong(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry._ID));
 
         // New columns
@@ -46,8 +45,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         float serviceRating = mCursor.getFloat(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry.COLUMN_SERVICE_RATING));
         String critique = mCursor.getString(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry.COLUMN_CRITIQUE));
 
-        holder.nameTextView.setText(name);
-        holder.partySizeTextView.setText(String.valueOf(partySize));
+
         holder.restaurantNameTextView.setText(restaurantName); // Set restaurant name
         holder.dateTextView.setText(date); // Set date
         holder.timeTextView.setText(time); // Set time
@@ -72,8 +70,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     }
 
     class GuestViewHolder extends RecyclerView.ViewHolder {
-        TextView nameTextView;
-        TextView partySizeTextView;
+
         TextView restaurantNameTextView;
         TextView dateTextView;
         TextView timeTextView;
@@ -84,8 +81,6 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
 
         public GuestViewHolder(View itemView) {
             super(itemView);
-            nameTextView = itemView.findViewById(R.id.restaurant_name_edit_text);
-            partySizeTextView = itemView.findViewById(R.id.all_reviews_list_view);
             restaurantNameTextView = itemView.findViewById(R.id.restaurant_name_text_view);
             dateTextView = itemView.findViewById(R.id.date_edit_text);
             timeTextView = itemView.findViewById(R.id.time_edit_text);
