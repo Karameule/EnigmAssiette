@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Nom du restaurant -->
+    <TextView
+        android:id="@+id/restaurant_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/default_guest_name" />
+
+    <!-- Note de décoration -->
+    <TextView
+        android:id="@+id/decoration_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:text="Décoration : 4.5/5" />
+
+    <!-- Note de nourriture -->
+    <TextView
+        android:id="@+id/food_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:text="Nourriture : 4.2/5" />
+
+    <!-- Note de service -->
+    <TextView
+        android:id="@+id/service_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:text="Service : 4.8/5" />
+
+    <!-- Critique -->
+    <TextView
+        android:id="@+id/critique_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:text="C'était une expérience fantastique..." />
+</LinearLayout>
